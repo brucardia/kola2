@@ -270,5 +270,87 @@ footer {
     font-size: 36px;
   }
 }
+/* ======================
+   PÁGINA FORRÓ
+====================== */
 
+.page-forro {
+  padding-top: 40px;
+}
+
+/* HERO */
+
+.forro-hero {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+.forro-hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.forro-hero .subtitle {
+  font-size: 22px;
+  max-width: 720px;
+  line-height: 1.4;
+}
+
+/* SOBRE */
+
+.forro-about {
+  max-width: 900px;
+}
+
+.forro-about p {
+  max-width: 720px;
+}
+
+/* NÍVEIS */
+
+.forro-levels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-top: 40px;
+}
+
+.level-card {
+  border: 1px solid #ff7f00;
+  border-radius: 28px;
+  padding: 40px;
+  background: #fef7e5;
+}
+
+.level-card h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.level-card p {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+/* Centraliza botão */
+.level-card .button {
+  margin-top: 10px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+  .forro-levels {
+    grid-template-columns: 1fr;
+  }
+
+  .forro-hero h1 {
+    font-size: 40px;
+  }
+
+  .forro-hero .subtitle {
+    font-size: 18px;
+  }
+}
 
