@@ -45,7 +45,7 @@
   <!-- HERO -->
   <section class="forro-hero">
     <div class="forro-hero-text">
-      <h1>Kola na aula de Forró</h1>
+      <h1>Forró na Kola</h1>
       <p>
         O forró na Kola é mais do que aprender passos.
         É encontro, escuta, corpo presente e alegria compartilhada.
@@ -90,13 +90,12 @@
         criando segurança e confiança.
       </p>
 
-      <a
-        href="https://kolanelas.simplybook.me/v2/#book/service/2"
-        target="_blank"
-        class="button"
-      >
+      <button class="button" onclick="openBooking('iniciante')">
         Ver horários e planos
-      </a>
+      </button>
+
+      <!-- SIMPLYBOOK INICIANTE -->
+      <div id="booking-iniciante" class="booking-box"></div>
     </div>
 
     <!-- INTERMEDIÁRIO -->
@@ -111,13 +110,12 @@
         fluidez, comunicação no par e expressão.
       </p>
 
-      <a
-        href="https://kolanelas.simplybook.me/v2/#book/service/3"
-        target="_blank"
-        class="button"
-      >
+      <button class="button" onclick="openBooking('intermediario')">
         Ver horários e planos
-      </a>
+      </button>
+
+      <!-- SIMPLYBOOK INTERMEDIÁRIO -->
+      <div id="booking-intermediario" class="booking-box"></div>
     </div>
 
   </section>
@@ -128,6 +126,49 @@
   <p>© Kola — dança, festa e encontro</p>
 </footer>
 
+<!-- SIMPLYBOOK SCRIPT -->
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
+
+<script>
+  function openBooking(tipo) {
+    const containerId =
+      tipo === 'iniciante'
+        ? 'booking-iniciante'
+        : 'booking-intermediario';
+
+    const container = document.getElementById(containerId);
+
+    // evita recriar o widget
+    if (container.dataset.loaded) return;
+
+    new SimplybookWidget({
+      widget_type: "iframe",
+      url: "https://kolanelas.simplybook.me",
+      theme: "hugo",
+      theme_settings: {
+        timeline_hide_unavailable: "1",
+        timeline_modern_display: "as_slots",
+        nav_bg_color: "#fef7e5",
+        body_bg_color: "#fef7e5",
+        sb_base_color: "#ff0066",
+        btn_color_1: "#c600ff",
+        dark_font_color: "#333333",
+        light_font_color: "#fef7e5",
+        show_sidebar: "1"
+      },
+      timeline: "modern",
+      datepicker: "top_calendar",
+      app_config: {
+        predefined: {
+          service: tipo === 'iniciante' ? "2" : "3"
+        }
+      },
+      container_id: containerId
+    });
+
+    container.dataset.loaded = "true";
+  }
+</script>
+
 </body>
 </html>
-
