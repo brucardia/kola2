@@ -134,7 +134,7 @@ header {
 }
 
 /* overlay suave pra leitura */
-.home-hero::before {
+/*.home-hero::before {
   content: '';
   position: absolute;
   inset: 0;
