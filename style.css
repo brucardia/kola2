@@ -1,0 +1,245 @@
+/* ======================
+   FONTE
+====================== */
+
+@font-face {
+  font-family: 'Aminute';
+  src: url('../assets/fonts/aminute.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======================
+   RESET + BASE
+====================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Aminute', sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* ======================
+   HEADER + MENU
+====================== */
+
+header {
+  padding: 24px 40px;
+  position: relative;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.menu a,
+.dropdown-title {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ======================
+   DROPDOWN AULAS
+====================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  display: none;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 22px;
+  color: #111;
+}
+
+.dropdown-menu a:hover {
+  background: #f4f4f4;
+}
+
+/* Hover abre menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ======================
+   BOTÕES
+====================== */
+
+.button {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 18px;
+}
+
+/* ======================
+   HOME HERO
+====================== */
+
+.home-hero {
+  min-height: 100vh;
+  background-image: url('../assets/bg-home.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-content {
+  background: rgba(255, 248, 235, 0.9);
+  padding: 60px 48px;
+  border-radius: 28px;
+  max-width: 720px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+/* ======================
+   SEÇÕES INTERNAS
+====================== */
+
+.section {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* ======================
+   CARDS
+====================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  border: 1px solid #eee;
+  padding: 36px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.card ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+footer {
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  margin-top: 80px;
+  font-size: 16px;
+}
+
+/* ======================
+   RESPONSIVO
+====================== */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 20px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .home-content {
+    padding: 40px 24px;
+  }
+
+  .home-content h1 {
+    font-size: 38px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 60px 24px;
+  }
+
+  .section h1 {
+    font-size: 36px;
+  }
+}
+
