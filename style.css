@@ -43,9 +43,21 @@ header {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
+
+.logo img {
+  height: 48px; /* ajuste conforme o tamanho do seu logo */
+  width: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 36px;
+  }
+}
+
 
 .menu {
   list-style: none;
