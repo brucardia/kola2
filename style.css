@@ -282,20 +282,24 @@ footer {
 
 .forro-hero {
   max-width: 900px;
-  margin: 0 auto 80px;
-  padding: 0 24px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.forro-hero h1 {
-  font-size: 56px;
-  margin-bottom: 20px;
+.forro-hero-image {
+  margin-top: 32px;
 }
 
-.forro-hero .subtitle {
-  font-size: 22px;
-  max-width: 720px;
-  line-height: 1.4;
+.forro-hero-image img {
+  width: 100%;
+  max-width: 720px;   /* 🔥 controla o tamanho */
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
 }
+
 
 /* SOBRE */
 
