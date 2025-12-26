@@ -22,7 +22,7 @@
 body {
   font-family: 'Aminute', sans-serif;
   background: #fef7e5;
-  color: #fef7e5;
+  color: #000;
   line-height: 1.4;
 }
 
@@ -57,7 +57,7 @@ header {
 .menu a,
 .dropdown-title {
   text-decoration: none;
-  color: #fef7e5;
+  color: #c600ff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -89,11 +89,11 @@ header {
 .dropdown-menu a {
   display: block;
   padding: 12px 22px;
-  color: #111;
+  color: #ff7f00;
 }
 
 .dropdown-menu a:hover {
-  background: #fef7e5;
+  background: #ff0066;
 }
 
 /* Hover abre menu */
