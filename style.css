@@ -48,16 +48,16 @@ header {
 }
 
 .logo img {
-  height: 48px; /* ajuste conforme o tamanho do seu logo */
+  height: 48px;
   width: auto;
   display: block;
 }
+
 @media (max-width: 768px) {
   .logo img {
     height: 36px;
   }
 }
-
 
 .menu {
   list-style: none;
@@ -108,7 +108,6 @@ header {
   background: #ff0066;
 }
 
-/* Hover abre menu */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -145,21 +144,11 @@ header {
   justify-content: center;
 }
 
-/* overlay suave pra leitura */
-/*.home-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(254, 247, 229, 0.35);
-  z-index: 1;
-}
-
 /* miolo da vulva */
 .home-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
   max-width: 520px;
   width: 100%;
@@ -281,4 +270,5 @@ footer {
     font-size: 36px;
   }
 }
+
 
