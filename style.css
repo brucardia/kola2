@@ -358,3 +358,21 @@ footer {
   }
 }
 
+.booking-box {
+  margin-top: 32px;
+}
+
+.booking-box iframe {
+  width: 100%;
+  min-height: 850px;
+  border: none;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .booking-box iframe {
+    min-height: 950px;
+  }
+}
+
+
