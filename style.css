@@ -21,8 +21,8 @@
 
 body {
   font-family: 'Aminute', sans-serif;
-  background: #fff;
-  color: #111;
+  background: #fef7e5;
+  color: #fef7e5;
   line-height: 1.4;
 }
 
@@ -57,7 +57,7 @@ header {
 .menu a,
 .dropdown-title {
   text-decoration: none;
-  color: #111;
+  color: #fef7e5;
   font-weight: bold;
   cursor: pointer;
 }
@@ -74,7 +74,7 @@ header {
   position: absolute;
   top: 120%;
   left: 0;
-  background: #fff;
+  background: #fef7e5;
   border-radius: 14px;
   padding: 10px 0;
   min-width: 180px;
@@ -93,7 +93,7 @@ header {
 }
 
 .dropdown-menu a:hover {
-  background: #f4f4f4;
+  background: #fef7e5;
 }
 
 /* Hover abre menu */
@@ -108,8 +108,8 @@ header {
 .button {
   display: inline-block;
   padding: 14px 30px;
-  background: #000;
-  color: #fff;
+  background: #c600ff;
+  color: #fef7e5;
   text-decoration: none;
   border-radius: 999px;
   font-size: 18px;
@@ -188,7 +188,7 @@ header {
   border: 1px solid #eee;
   padding: 36px;
   border-radius: 24px;
-  background: #fff;
+  background: #fef7e5;
 }
 
 .card ul {
