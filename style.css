@@ -121,7 +121,9 @@ header {
 
 .home-hero {
   min-height: 100vh;
-  background-image: url('../assets/bg-home.png');
+  position: relative;
+
+  background-image: url('./KOLA_POSTER_HORIZONTAL.png'); /* ajuste o nome se necessário */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +131,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .home-content {
