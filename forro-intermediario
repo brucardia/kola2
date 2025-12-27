@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forró Intermediário na Kola - Aulas para Quem Já Dança | Evolua no Forró</title>
+  <meta name="description" content="Aulas de forró intermediário na Kola em São Paulo. Aprimore passos, musicalidade, condução e floreio. Leve sua dança para o próximo nível!" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos rápidos para os novos cards de pacotes (mantenha em style.css no futuro) */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px; /* Adiciona um pequeno padding nas laterais */
+    }
+    .pricing-card {
+      background: #fff;
+      border: 2px solid #c600ff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px; /* Largura fixa para os cards */
+      max-width: 100%; /* Garante responsividade em telas menores */
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pricing-card.featured {
+      transform: scale(1.05);
+      border-color: #ff0066;
+    }
+    .pricing-card h4 { color: #c600ff; font-size: 1.5rem; margin-bottom: 10px; }
+    .pricing-card .price { font-size: 2rem; font-weight: bold; margin: 15px 0; color: #333; }
+    .pricing-card .details { font-size: 0.9rem; margin-bottom: 20px; color: #666; min-height: 40px;} /* Altura mínima para os detalhes */
+    .badge { background: #ff0066; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; }
+
+    /* Ajustes para telas menores */
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .pricing-card {
+        width: 90%; /* Ocupa mais largura em telas pequenas */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="KOLA_LOGO_COLORIDO.png" alt="Kola" />
+    </a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <span class="dropdown-title">Aulas</span>
+        <ul class="dropdown-menu">
+          <li><a href="forro-iniciante.html">Forró Iniciante</a></li>
+          <li><a href="forro-intermediario.html">Forró Intermediário</a></li>
+          <li><a href="rebolado.html">Rebolado</a></li>
+        </ul>
+      </li>
+      <li><a href="festas.html">Festas</a></li>
+      <li><a href="lojinha.html">Lojinha</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-forro">
+
+  <section class="forro-hero">
+    <div class="forro-hero-text">
+      <h1>Forró Intermediário na Kola</h1>
+      <p>Aprimore sua dança e explore a musicalidade do forró. Leve seus movimentos e sua conexão para outro nível em São Paulo.</p>
+    </div>
+    <div class="forro-hero-image">
+      <img src="fotoaulaforro2.png" alt="Aula de forró intermediário na Kola" />
+    </div>
+  </section>
+
+  <section class="forro-about section">
+    <h2>Aprofunde-se no Forró: Técnica, Musicalidade e Expressão</h2>
+    <p>Se você já tem familiaridade com os passos básicos e quer ir além, nossas **aulas de forró intermediário** são para você. Vamos explorar novas sequências, giros, floreios e aprimorar a musicalidade. O foco é refinar a condução, a escuta ativa e aprimorar a expressão corporal, sempre em um ambiente de troca e aprendizado.</p>
+    <p>Na Kola, incentivamos a criatividade e a fluidez na dança. Nossas aulas de **forró avançado em São Paulo** são o lugar ideal para expandir seu vocabulário de movimentos, entender melhor a estrutura das músicas e desenvolver um estilo único. Prepare-se para dançar com mais liberdade e confiança!</p>
+  </section>
+  
+  <section class="forro-pricing section" style="background-color: #fef7e5; padding-top: 40px; padding-bottom: 60px;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2>Leve seu Forró para o Próximo Nível!</h2>
+      <p>Escolha o plano que melhor se adapta à sua evolução na dança. Após o pagamento, você terá acesso imediato para agendar suas aulas.</p>
+    </div>
+
+    <div class="pricing-container">
+      
+      <div class="pricing-card">
+        <div>
+          <h4>Aula Avulsa</h4>
+          <p class="price">R$ 50</p>
+          <p class="details">Experimente uma aula.<br>Sem compromisso.</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/5" class="button">Comprar Aula</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div>
+          <span class="badge">MAIS PROCURADO</span>
+          <h4>Plano Mensal</h4>
+          <p class="price">R$ 160</p>
+          <p class="details">4 aulas inclusas.<br>R$40/aula. Válido por 30 dias após a compra.</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/4" class="button">Assinar Mensal</a>
+      </div>
+
+      <div class="pricing-card">
+        <div>
+          <h4>Plano Trimestral</h4>
+          <p class="price">R$ 375<small>/mês</small></p> <p class="details">12 aulas (R$125/mês).<br>Válido por 90 dias após a compra. Economize!</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/6" class="button">Assinar Trimestral</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© Kola — dança, festa e encontro</p>
+</footer>
+
+</body>
+</html>
