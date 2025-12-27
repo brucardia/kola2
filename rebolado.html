@@ -2,73 +2,135 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Rebolado — Kola</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula de Rebolado na Kola - Movimento e Expressão Corporal em São Paulo</title>
+  <meta name="description" content="Descubra a aula de Rebolado na Kola em São Paulo! Fortaleça seu corpo, libere sua expressão e encontre o ritmo interno. Movimente-se com liberdade e confiança." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos rápidos para os novos cards de pacotes (mantenha em style.css no futuro) */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 20px; /* Adiciona um pequeno padding nas laterais */
+    }
+    .pricing-card {
+      background: #fff;
+      border: 2px solid #c600ff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px; /* Largura fixa para os cards */
+      max-width: 100%; /* Garante responsividade em telas menores */
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pricing-card.featured {
+      transform: scale(1.05);
+      border-color: #ff0066;
+    }
+    .pricing-card h4 { color: #c600ff; font-size: 1.5rem; margin-bottom: 10px; }
+    .pricing-card .price { font-size: 2rem; font-weight: bold; margin: 15px 0; color: #333; }
+    .pricing-card .details { font-size: 0.9rem; margin-bottom: 20px; color: #666; min-height: 40px;} /* Altura mínima para os detalhes */
+    .badge { background: #ff0066; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; }
+
+    /* Ajustes para telas menores */
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .pricing-card {
+        width: 90%; /* Ocupa mais largura em telas pequenas */
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <strong>KOLA</strong>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="aulas.html">Aulas</a>
-      <a href="festas.html">Festas</a>
-      <a href="lojinha.html">Lojinha</a>
-    </div>
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="KOLA_LOGO_COLORIDO.png" alt="Kola" />
+    </a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <span class="dropdown-title">Aulas</span>
+        <ul class="dropdown-menu">
+          <li><a href="forro-iniciante.html">Forró Iniciante</a></li>
+          <li><a href="forro-intermediario.html">Forró Intermediário</a></li>
+          <li><a href="rebolado.html">Rebolado</a></li>
+        </ul>
+      </li>
+      <li><a href="festas.html">Festas</a></li>
+      <li><a href="lojinha.html">Lojinha</a></li>
+    </ul>
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Rebolado</h1>
-  <p>
-    Aula focada em consciência corporal, autoestima
-    e liberdade de movimento.
-  </p>
-</section>
+<main class="page-rebolado">
 
-<section class="section">
-  <div class="cards">
+  <section class="forro-hero"> <div class="forro-hero-text">
+      <h1>Aula de Rebolado na Kola</h1>
+      <p>Fortaleça seu corpo, libere sua expressão e encontre seu ritmo interno com nossas aulas de rebolado em São Paulo.</p>
+    </div>
+    <div class="forro-hero-image">
+      <img src="fotorebolado.png" alt="Aula de Rebolado na Kola" /> </div>
+  </section>
 
-    <div class="card">
-      <h2>O que é a aula</h2>
-      <p>
-        O rebolado na Kola é sobre presença, prazer e escuta do corpo.
-        Não é sobre performar — é sobre sentir.
-      </p>
-
-      <p>
-        A aula mistura exercícios de base, mobilidade,
-        improviso e música brasileira.
-      </p>
+  <section class="forro-about section"> <h2>Liberte Seu Movimento com a Aula de Rebolado</h2>
+    <p>Nossas **aulas de rebolado em São Paulo** são um convite para você explorar a liberdade do seu corpo, fortalecer o abdômen e a pélvis, e descobrir a sua expressão mais autêntica através da dança. Não é só rebolar, é um trabalho de consciência corporal, ritmo e muita energia.</p>
+    <p>Na Kola, criamos um espaço seguro e divertido para todos os corpos se movimentarem. Com exercícios focados no core, na dissociação e na fluidez, você vai ganhar mais confiança, flexibilidade e um rebolado de respeito! Se busca uma **aula de dança solo** que te conecte com seu poder pessoal, a Kola é o seu lugar.</p>
+  </section>
+  
+  <section class="forro-pricing section" style="background-color: #fef7e5; padding-top: 40px; padding-bottom: 60px;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2>Descubra seu Ritmo com Nossos Planos de Rebolado!</h2>
+      <p>Escolha o plano que melhor se encaixa no seu desejo de movimento. Após o pagamento, você terá acesso imediato para agendar suas aulas.</p>
     </div>
 
-    <div class="card">
-      <h2>Planos disponíveis</h2>
-      <ul>
-        <li>Aula avulsa</li>
-        <li>Plano mensal</li>
-        <li>Plano trimestral</li>
-        <li>Combo Forró + Rebolado</li>
-      </ul>
+    <div class="pricing-container">
+      
+      <div class="pricing-card">
+        <div>
+          <h4>Aula Avulsa</h4>
+          <p class="price">R$ 50</p>
+          <p class="details">Experimente uma aula.<br>Liberte-se!</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/7" class="button">Comprar Aula</a>
+      </div>
 
-      <br />
+      <div class="pricing-card featured">
+        <div>
+          <span class="badge">MAIS ENERGIA</span>
+          <h4>Plano Mensal</h4>
+          <p class="price">R$ 160</p>
+          <p class="details">4 aulas inclusas.<br>R$40/aula. Válido por 30 dias após a compra.</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/8" class="button">Assinar Mensal</a>
+      </div>
 
-      <a
-        class="button"
-        href="https://SEU-LINK-SIMPLYBOOK-REBOLADO"
-        target="_blank"
-      >
-        Agendar aula
-      </a>
+      <div class="pricing-card">
+        <div>
+          <h4>Plano Trimestral</h4>
+          <p class="price">R$ 375<small>/mês</small></p> <p class="details">12 aulas (R$125/mês).<br>Válido por 90 dias após a compra. Mais movimento por menos!</p>
+        </div>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/9" class="button">Assinar Trimestral</a>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+</main>
 
 <footer>
-  <p>© Kola — dança, festa e afeto</p>
+  <p>© Kola — dança, festa e encontro</p>
 </footer>
 
 </body>
