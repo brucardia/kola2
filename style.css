@@ -1,7 +1,6 @@
 /* ======================
    FONTE
 ====================== */
-
 @font-face {
   font-family: 'Aminute';
   src: url('./Aminute.ttf') format('truetype');
@@ -12,7 +11,6 @@
 /* ======================
    RESET + BASE
 ====================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +27,6 @@ body {
 /* ======================
    HEADER + MENU
 ====================== */
-
 header {
   padding: 24px 40px;
   position: relative;
@@ -42,21 +39,10 @@ header {
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logo img {
   height: 48px;
   width: auto;
   display: block;
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    height: 36px;
-  }
 }
 
 .menu {
@@ -66,22 +52,15 @@ header {
   align-items: center;
 }
 
-.menu a,
-.dropdown-title {
+.menu a, .dropdown-title {
   text-decoration: none;
   color: #c600ff;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* ======================
-   DROPDOWN AULAS
-====================== */
-
-.dropdown {
-  position: relative;
-}
-
+/* DROPDOWN */
+.dropdown { position: relative; }
 .dropdown-menu {
   position: absolute;
   top: 120%;
@@ -93,29 +72,18 @@ header {
   box-shadow: 0 12px 32px rgba(0,0,0,0.15);
   display: none;
 }
-
-.dropdown-menu li {
-  list-style: none;
-}
-
 .dropdown-menu a {
   display: block;
   padding: 12px 22px;
   color: #ff7f00;
+  text-decoration: none;
 }
-
-.dropdown-menu a:hover {
-  background: #ff0066;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+.dropdown-menu a:hover { background: #ff0066; color: #fff; }
+.dropdown:hover .dropdown-menu { display: block; }
 
 /* ======================
    BOTÕES
 ====================== */
-
 .button {
   display: inline-block;
   padding: 14px 30px;
@@ -124,162 +92,101 @@ header {
   text-decoration: none;
   border-radius: 999px;
   font-size: 18px;
+  transition: transform 0.2s, background 0.2s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
-/* ======================
-   HOME HERO
-====================== */
-
-.home-hero {
-  min-height: 100vh;
-  position: relative;
-
-  background-image: url('./buceta.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* miolo da vulva */
-.home-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  max-width: 520px;
-  width: 100%;
-
-  padding: 48px 32px;
-  text-align: left;
-
-  background: transparent;
-  transform: translateY(20px);
-}
-
-.home-content h1 {
-  font-size: 52px;
-  line-height: 1.05;
-  margin-bottom: 24px;
-}
-
-.home-content p {
-  font-size: 20px;
-  line-height: 1.4;
-  max-width: 420px;
-  margin-bottom: 32px;
+.button:hover {
+  background: #ff0066;
+  transform: translateY(-2px);
 }
 
 /* ======================
    SEÇÕES INTERNAS
 ====================== */
-
 .section {
   padding: 80px 40px;
   max-width: 1100px;
   margin: auto;
 }
 
-.section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.section h1 { font-size: 48px; margin-bottom: 20px; color: #c600ff; }
+.section h2 { font-size: 38px; margin-bottom: 24px; color: #ff7f00; }
+.section p { font-size: 20px; margin-bottom: 20px; }
+
+/* ======================
+   ESTILO DOS PACOTES (NOVO)
+====================== */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  flex-wrap: wrap;
 }
 
-.section h2 {
-  font-size: 32px;
+.pricing-card {
+  background: #fff;
+  border: 2px solid #ff7f00;
+  border-radius: 28px;
+  padding: 40px;
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* Card Destaque (Mensal) */
+.pricing-card.featured {
+  border-color: #c600ff;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(198, 0, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.badge {
+  background: #ff0066;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
-.section p {
-  font-size: 20px;
-  margin-bottom: 20px;
+.pricing-card h4 {
+  font-size: 24px;
+  color: #c600ff;
+  margin-bottom: 12px;
+}
+
+.pricing-card .price {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.pricing-card .price small {
+  font-size: 18px;
+  color: #666;
+}
+
+.pricing-card .details {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 32px;
+  min-height: 60px;
 }
 
 /* ======================
-   CARDS
+   PÁGINAS DE SERVIÇO (HERO)
 ====================== */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.card {
-  border: 1px solid #ff7f00;
-  padding: 36px;
-  border-radius: 24px;
-  background: #fef7e5;
-}
-
-.card ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-/* ======================
-   FOOTER
-====================== */
-
-footer {
-  padding: 50px 20px;
-  text-align: center;
-  border-top: 1px solid #eee;
-  margin-top: 80px;
-  font-size: 16px;
-}
-
-/* ======================
-   RESPONSIVO
-====================== */
-
-@media (max-width: 768px) {
-
-  header {
-    padding: 20px;
-  }
-
-  .menu {
-    gap: 20px;
-  }
-
-  .home-content {
-    max-width: 340px;
-    padding: 32px 20px;
-    text-align: center;
-    transform: translateY(10px);
-  }
-
-  .home-content h1 {
-    font-size: 36px;
-  }
-
-  .home-content p {
-    font-size: 17px;
-    max-width: 100%;
-  }
-
-  .section {
-    padding: 60px 24px;
-  }
-
-  .section h1 {
-    font-size: 36px;
-  }
-}
-/* ======================
-   PÁGINA FORRÓ
-====================== */
-
-.page-forro {
-  padding-top: 40px;
-}
-
-/* HERO */
-
 .forro-hero {
   max-width: 900px;
   margin: 0 auto;
@@ -287,92 +194,52 @@ footer {
   text-align: center;
 }
 
-.forro-hero-image {
-  margin-top: 32px;
-}
-
 .forro-hero-image img {
   width: 100%;
-  max-width: 720px;   /* 🔥 controla o tamanho */
-  height: auto;
-  border-radius: 16px;
-  display: block;
-  margin: 0 auto;
-}
-
-
-/* SOBRE */
-
-.forro-about {
-  max-width: 900px;
-}
-
-.forro-about p {
   max-width: 720px;
-}
-
-/* NÍVEIS */
-
-.forro-levels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
-  margin-top: 40px;
-}
-
-.level-card {
-  border: 1px solid #ff7f00;
-  border-radius: 28px;
-  padding: 40px;
-  background: #fef7e5;
-}
-
-.level-card h3 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-.level-card p {
-  font-size: 18px;
-  margin-bottom: 28px;
-}
-
-/* Centraliza botão */
-.level-card .button {
-  margin-top: 10px;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 900px) {
-  .forro-levels {
-    grid-template-columns: 1fr;
-  }
-
-  .forro-hero h1 {
-    font-size: 40px;
-  }
-
-  .forro-hero .subtitle {
-    font-size: 18px;
-  }
-}
-
-.booking-box {
+  height: auto;
+  border-radius: 24px;
   margin-top: 32px;
 }
 
-.booking-box iframe {
-  width: 100%;
-  min-height: 850px;
-  border: none;
-  border-radius: 16px;
+/* ======================
+   FOOTER
+====================== */
+footer {
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 80px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ======================
+   RESPONSIVO
+====================== */
+@media (max-width: 900px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1); /* Remove o zoom no mobile pra não cortar */
+  }
+
+  .section h1 { font-size: 36px; }
+  .section h2 { font-size: 30px; }
 }
 
 @media (max-width: 768px) {
-  .booking-box iframe {
-    min-height: 950px;
-  }
+  header { padding: 20px; }
+  .logo img { height: 36px; }
+  .menu { gap: 15px; }
 }
 
 
