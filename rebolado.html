@@ -131,6 +131,33 @@
 <footer>
   <p>© Kola — dança, festa e encontro</p>
 </footer>
+<script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var instance = new SimplybookWidget({
+        "widget_type": "button",
+        "url": "https://kolanelas.simplybook.me",
+        "theme": "creative",
+        "theme_settings": {
+            "sb_base_color": "#ff0066",
+            "body_bg_color": "#fef7e5",
+            "btn_color_1": "#c600ff"
+        },
+        "app_config": { "clear_session": 0 },
+        "button_title": "Agendar",
+        "button_background_color": "#c600ff",
+        "button_text_color": "#ffffff",
+        "button_position": "right",
+        "button_position_offset": "45%"
+    });
 
+    // Função para fazer seus botões manuais abrirem o widget
+    document.querySelectorAll('.pricing-card .button').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const packageId = this.href.split('/').pop();
+            instance.showWidget({navigate: 'package/' + packageId});
+        });
+    });
+</script>
 </body>
 </html>
