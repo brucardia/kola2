@@ -315,4 +315,86 @@ footer {
   .menu { gap: 15px; }
 }
 
+/* ======================
+   SEÇÃO MODALIDADES (NOVO)
+====================== */
 
+.modalidades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+.modalidade-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden; /* Garante que a imagem siga o arredondamento */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid rgba(198, 0, 255, 0.1);
+}
+
+.modalidade-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(198, 0, 255, 0.15);
+}
+
+/* Espaço para a Foto da Dança */
+.modalidade-image {
+  width: 100%;
+  height: 220px;
+  background-color: #eee; /* Cor de fundo caso não tenha foto */
+  overflow: hidden;
+}
+
+.modalidade-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a foto sem distorcer */
+}
+
+.modalidade-info {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modalidade-info h3 {
+  font-size: 26px;
+  color: #c600ff;
+  margin-bottom: 15px;
+}
+
+.modalidade-info p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Botão específico para o card */
+.modalidade-info .button {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+/* Ajuste no título da seção para centralizar */
+.section-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .modalidades-container {
+    grid-template-columns: 1fr; /* 1 card por linha no celular */
+  }
+}
