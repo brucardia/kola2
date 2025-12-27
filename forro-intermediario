@@ -58,8 +58,10 @@
     <a href="index.html" class="logo">
       <img src="KOLA_LOGO_COLORIDO.png" alt="Kola" />
     </a>
+
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
+
       <li class="dropdown">
         <span class="dropdown-title">Aulas</span>
         <ul class="dropdown-menu">
@@ -68,6 +70,7 @@
           <li><a href="rebolado.html">Rebolado</a></li>
         </ul>
       </li>
+
       <li><a href="festas.html">Festas</a></li>
       <li><a href="lojinha.html">Lojinha</a></li>
     </ul>
