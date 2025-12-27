@@ -127,47 +127,9 @@
 </footer>
 
 <!-- SIMPLYBOOK SCRIPT -->
-<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
-
-<script>
-  function openBooking(tipo) {
-    const containerId =
-      tipo === 'iniciante'
-        ? 'booking-iniciante'
-        : 'booking-intermediario';
-
-    const container = document.getElementById(containerId);
-
-    // evita recriar o widget
-    if (container.dataset.loaded) return;
-
-    new SimplybookWidget({
-      widget_type: "iframe",
-      url: "https://kolanelas.simplybook.me",
-      theme: "hugo",
-      theme_settings: {
-        timeline_hide_unavailable: "1",
-        timeline_modern_display: "as_slots",
-        nav_bg_color: "#fef7e5",
-        body_bg_color: "#fef7e5",
-        sb_base_color: "#ff0066",
-        btn_color_1: "#c600ff",
-        dark_font_color: "#333333",
-        light_font_color: "#fef7e5",
-        show_sidebar: "1"
-      },
-      timeline: "modern",
-      datepicker: "top_calendar",
-      app_config: {
-        predefined: {
-          service: tipo === 'iniciante' ? "2" : "3"
-        }
-      },
-      container_id: containerId
-    });
-
-    container.dataset.loaded = "true";
-  }
+<script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/kolanelas.simplybook.me","theme":"creative","theme_settings":{"timeline_show_end_time":"0","timeline_modern_display":"as_slots","timeline_hide_unavailable":"1","index_page_content_grid":"[{\"template\":\"col_25_50_25\",\"items\":[\"timetable\",\"about-us\",\"contacts\"]}]","hide_past_days":"0","sb_base_color":"#ff0066","display_item_mode":"block","booking_nav_bg_color":"#ff7f00","body_bg_color":"#fef7e5","sb_review_image":"","dark_font_color":"#c600ff","light_font_color":"#fef7e5","btn_color_1":"#c600ff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#ea3333","sb_available":"#5ccb5f"},"timeline":null,"datepicker":null,"is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]},"navigate":"packages"});
 </script>
 
 </body>
