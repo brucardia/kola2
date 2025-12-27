@@ -121,7 +121,7 @@
           <p class="price">R$ 125<small>/mês</small></p> 
           <p class="details"><strong>A aula sai por R$ 31!</strong><br>12 aulas (Total R$ 375).<br>Válido por 3 meses.</p>
         </div>
-        <a href="https://kolanelas.simplybook.me/v2/#packages/9" class="button" style="background: #ff0066;">Garantir Desconto</a>
+        <a href="https://kolanelas.simplybook.me/v2/#packages/9" class="button sb-widget-button" style="background: #ff0066;">Garantir Desconto</a>
       </div>
     </div>
 </section>
@@ -133,7 +133,6 @@
 </footer>
 <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
 <script type="text/javascript">
-    // 1. Inicializa o Widget mas mantém o botão flutuante escondido se preferir
     var instance = new SimplybookWidget({
         "widget_type": "button",
         "url": "https://kolanelas.simplybook.me",
@@ -141,7 +140,8 @@
         "theme_settings": {
             "sb_base_color": "#ff0066",
             "body_bg_color": "#fef7e5",
-            "btn_color_1": "#c600ff"
+            "btn_color_1": "#c600ff",
+            "display_item_mode": "block"
         },
         "app_config": { "clear_session": 0 },
         "button_title": "Agendar",
@@ -151,27 +151,16 @@
         "button_position_offset": "45%"
     });
 
-    // 2. Lógica para capturar o clique nos seus botões e abrir o Pop-up
-    document.addEventListener('DOMContentLoaded', function() {
-        // Seleciona todos os botões dentro dos cards de preço
-        const buttons = document.querySelectorAll('.pricing-card .button');
-        
-        buttons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault(); // Impede de abrir outra página
-                
-                // Pega o link (ex: https://kolanelas.simplybook.me/v2/#packages/1)
-                const fullUrl = this.getAttribute('href');
-                
-                // Extrai apenas o número final (o ID do pacote)
-                const packageId = fullUrl.split('/').pop();
-                
-                // Dispara o widget na tela de checkout do pacote específico
-                instance.showWidget({
-                    navigate: '/packages/' + packageId
-                });
+    // Esse trecho força a abertura do pacote específico ao clicar
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('sb-widget-button')) {
+            e.preventDefault();
+            var href = e.target.getAttribute('href');
+            var id = href.split('/').pop();
+            instance.showWidget({
+                navigate: '/packages/' + id
             });
-        });
+        }
     });
 </script>
 </body>
