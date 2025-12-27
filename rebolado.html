@@ -133,6 +133,7 @@
 </footer>
 <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
 <script type="text/javascript">
+    // 1. Inicializa o Widget mas mantém o botão flutuante escondido se preferir
     var instance = new SimplybookWidget({
         "widget_type": "button",
         "url": "https://kolanelas.simplybook.me",
@@ -150,12 +151,26 @@
         "button_position_offset": "45%"
     });
 
-    // Função para fazer seus botões manuais abrirem o widget
-    document.querySelectorAll('.pricing-card .button').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const packageId = this.href.split('/').pop();
-            instance.showWidget({navigate: 'package/' + packageId});
+    // 2. Lógica para capturar o clique nos seus botões e abrir o Pop-up
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona todos os botões dentro dos cards de preço
+        const buttons = document.querySelectorAll('.pricing-card .button');
+        
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede de abrir outra página
+                
+                // Pega o link (ex: https://kolanelas.simplybook.me/v2/#packages/1)
+                const fullUrl = this.getAttribute('href');
+                
+                // Extrai apenas o número final (o ID do pacote)
+                const packageId = fullUrl.split('/').pop();
+                
+                // Dispara o widget na tela de checkout do pacote específico
+                instance.showWidget({
+                    navigate: '/packages/' + packageId
+                });
+            });
         });
     });
 </script>
